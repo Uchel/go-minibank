@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "5eafc4d4-5eb7-4c2d-9770-0c9012c8656b",
+		"name": "MiniBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28066724"
+	},
+	"item": [
+		{
+			"name": "Register Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"tokopedia\",\n\"email\":\"tokped@gmail.com\",\n\"phone\":\"02022021\",\n\"address\":\"jakarta\",\n\"password\":\"12345\",\n\"balance\":200000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\":\"russel@gmail.com\",\n\"password\":\"12345\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trx Transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"receiver_account\":\"100221980672\",\n\"amount\":10000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/minibank/trx/transfer",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"minibank",
+						"trx",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trx Topup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\"amount\":200000\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/minibank/trx/topup",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"minibank",
+						"trx",
+						"topup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MyData",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/minibank/auth/find-data",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"minibank",
+						"auth",
+						"find-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "histories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\"amount\":200000\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/minibank/trx/histories",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"minibank",
+						"trx",
+						"histories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/minibank/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"minibank",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
